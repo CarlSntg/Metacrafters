@@ -5,8 +5,8 @@ This project is a simple token implementation in Solidity. The smart contract de
 ## Features
 
 - **Token Details:**
-  - Name: Carl (CRL)
-  - Abbreviation: CRL
+  - Name
+  - Abbreviation
   - Total Supply: Dynamic, starting at 0
 - **Minting**: Allows authorized addresses to create new tokens, increasing both the total supply and the balance of the specified address.
 - **Burning**: Allows token holders to destroy tokens, reducing their balance and the total supply.
