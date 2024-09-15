@@ -1,6 +1,6 @@
 # Token Smart Contract
 
-This project is a simple ERC-20-like token implementation in Solidity. The smart contract defines a custom token and includes basic functionalities such as minting and burning tokens. It is designed for educational purposes or as a starting point for further development of more complex token contracts.
+This project is a simple token implementation in Solidity. The smart contract defines a custom token and includes basic functionalities such as minting and burning tokens. It is designed for educational purposes or as a starting point for further development of more complex token contracts.
 
 ## Features
 
@@ -24,8 +24,8 @@ This project is a simple ERC-20-like token implementation in Solidity. The smart
 ## Prerequisites
 
 To interact with this contract, you need:
-- Solidity 0.8.26 or higher
-- A development environment such as [Remix IDE](https://remix.ethereum.org) or [Hardhat](https://hardhat.org)
+- Solidity 0.8.26
+- A development environment such as [Remix IDE](https://remix.ethereum.org)
 
 ## Usage
 
@@ -35,4 +35,4 @@ To interact with this contract, you need:
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License.
