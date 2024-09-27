@@ -1,43 +1,40 @@
-# Functions & Errors - ETH + AVAX (Smart Contract)
+# Gym Check-In System (Functions & Errors - ETH + AVAX)
 
-This project is a simple smart contract written in Solidity. It provides basic functionalities for managing a balance with constraints on deposits and withdrawals. This contract is suitable for educational purposes, particularly in showcasing the revert(), require(), and assert() statements in error handling.
+## Overview
+This project is a simple smart contract written in Solidity that manages gym memberships and check-ins. It allows users to activate or deactivate their memberships, check in to the gym, and check out when they leave, ensuring that the gym's occupancy does not exceed its capacity. This contract is suitable for educational purposes, particularly in showcasing the revert(), require(), and assert() statements in error handling.
 
 ## Features
-
-- **Balance Management:**
-  - Initial Balance: 100
-  - Maximum Withdrawal Limit: 200
-- **Deposits**: Allows users to deposit funds into the contract, increasing their balance.
-- **Withdrawals**: Allows users to withdraw funds from the contract, with constraints to prevent excessive withdrawals and ensure sufficient balance.
+- Activate and deactivate gym memberships.
+- Check in to the gym if you have an active membership and if there is available capacity.
+- Check out from the gym, updating the occupancy status.
 
 ## Functions
+### `activateMembership()`
+Activates the gym membership for the caller.
 
-1. **deposit(uint256 amount)**:
-   - Adds the specified `amount` to the contract's balance.
-   - Ensures that the deposit amount is greater than zero.
+### `deactivateMembership()`
+Deactivates the gym membership for the caller.
 
-2. **withdraw(uint256 amount)**:
-   - Deducts the specified `amount` from the contract's balance.
-   - Uses the `validWithdrawal` modifier to ensure the amount does not exceed the maximum allowed limit (200).
-   - Reverts the transaction if the withdrawal amount exceeds the available balance.
+### `checkIn()`
+Allows the caller to check in to the gym if:
+- They have an active membership.
+- The gym is not at full capacity.
+- They are not already checked in.
 
-## Modifiers
-
-- **validWithdrawal(uint256 amount)**:
-  - Ensures that the `amount` being withdrawn does not exceed the `MAX_WITHDRAWAL` limit.
-  - Uses `assert()` for validation.
+### `checkOut()`
+Allows the caller to check out of the gym, which will:
+- Ensure the caller is checked in.
+- Update the current occupancy.
 
 ## Prerequisites
-
-To interact with this contract, you need:
 - Solidity 0.8.26
-- A development environment such as [Remix IDE](https://remix.ethereum.org)
+- Ethereum development environment (e.g., [Remix IDE](https://remix.ethereum.org))
 
 ## Usage
-
-1. Deploy the contract using a Solidity compiler.
-2. Use the **deposit** function to add funds to the contract.
-3. Use the **withdraw** function to remove funds from the contract, ensuring that withdrawals do not exceed the balance or the maximum withdrawal limit.
+1. Deploy the `GymCheckInSystem` contract on the Ethereum network.
+2. Users can call the `activateMembership` function to become members.
+3. Members can check in using the `checkIn` function, provided the gym is not at full capacity and they are not already checked in.
+4. When leaving, members should call the `checkOut` function to update the occupancy.
 
 ## License
 
