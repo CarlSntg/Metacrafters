@@ -17,13 +17,15 @@ Deactivates the gym membership for the caller.
 
 ### `checkIn()`
 Allows the caller to check in to the gym if:
-- They have an active membership.
-- The gym is not at full capacity.
-- They are not already checked in.
+- They have an active membership (checked with `require`).
+- The gym is not at full capacity (checked with `require`).
+- They are not already checked in (checked with `require`).
+
+The use of `require` ensures that the conditions are met before proceeding, providing clear error messages when they are not.
 
 ### `checkOut()`
 Allows the caller to check out of the gym, which will:
-- Ensure the caller is checked in.
+- Ensure the caller is checked in (checked with `if` and `revert`).
 - Update the current occupancy.
 
 ## Prerequisites
