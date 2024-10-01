@@ -1,4 +1,4 @@
-# Membership DApp (Solidity + Javascript
+# Membership DApp (Solidity + Javascript)
 
 ## Overview
 This project demonstrates a decentralized application (DApp) that manages a membership system. It utilizes a Solidity smart contract where the owner can register members, and users can check their membership status through a React front-end. The project integrates Ethereum blockchain functionality, making it a great starting point for learning blockchain-based membership management.
