@@ -38,22 +38,22 @@ Returns a boolean indicating whether the provided address is a registered member
    ```
 
 3. **Start the local Ethereum network**:
-   - Open a terminal and run:
-     ```bash
-     npx hardhat node
-     ```
+   Open a terminal and run:
+   ```bash
+   npx hardhat node
+   ```
 
 4. **Deploy the contract**:
-   - Open another terminal and run:
-     ```bash
-     npx hardhat run --network localhost scripts/deploy.js
-     ```
+   Open another terminal and run:
+   ```bash
+   npx hardhat run --network localhost scripts/deploy.js
+   ```
 
 5. **Launch the front-end application**:
-   - Back in the first terminal, run:
-     ```bash
-     npm run dev
-     ```
+   Back in the first terminal, run:
+   ```bash
+   npm run dev
+   ```
 
 6. **Access the application**:
    The front-end will be available at `http://localhost:3000/`. You can connect your MetaMask wallet to interact with the DApp, register as a member, and check membership status.
